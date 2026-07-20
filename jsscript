@@ -1,0 +1,213 @@
+const output = document.getElementById('output');
+
+function show(title, text) {
+    output.innerHTML += `
+        <div style="background:white;padding:15px;margin:15px 0;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1)">
+            <h2>${title}</h2>
+            <pre>${text}</pre>
+        </div>
+    `;
+}
+
+// Task 1
+let empName = 'Himavanth';
+let employeeId = 'EMP1001';
+let department = 'Frontend';
+let salary = 35000;
+let isPermanent = true;
+
+show('Task 1 - Employee Profile',
+`Name : ${empName}
+Employee ID : ${employeeId}
+Department : ${department}
+Salary : ${salary}
+Permanent : ${isPermanent}`);
+
+// Task 2
+let student = {
+    name: 'Himavanth',
+    age: 22,
+    course: 'B.Tech',
+    college: 'SRM University',
+    passed: true
+};
+
+show('Task 2 - Student Details',
+`Student Name : ${student.name}
+Course : ${student.course}
+Passed Status : ${student.passed}`);
+
+// Task 3
+let cart = ['Facewash','Rice','Oil','Sugar','Milk'];
+
+show('Task 3 - Shopping Cart',
+`First Product : ${cart[0]}
+Third Product : ${cart[2]}
+Last Product : ${cart[cart.length-1]}
+Total Products : ${cart.length}`);
+
+// Task 4
+let employeeDB = {
+    name: 'Himavanth',
+    designation: 'Frontend Developer',
+    salary: 35000,
+    skills: ['HTML','CSS','JavaScript','React']
+};
+
+show('Task 4 - Company Employee Database',
+`Employee Name : ${employeeDB.name}
+Designation : ${employeeDB.designation}
+Second Skill : ${employeeDB.skills[1]}`);
+
+// Task 5
+let basicSalary = 25000;
+let bonus = 5000;
+let totalSalary = basicSalary + bonus;
+
+show('Task 5 - Salary Calculation',
+`Total Salary : ${totalSalary}`);
+
+// Task 6
+let productPrice = 4500;
+let gstAmount = productPrice * 18 / 100;
+let finalAmountGST = productPrice + gstAmount;
+
+show('Task 6 - GST Calculator',
+`GST Amount : ${gstAmount}
+Final Amount : ${finalAmountGST}`);
+
+// Task 7
+let number = 25;
+let evenOdd = number % 2 === 0 ? 'Even Number' : 'Odd Number';
+
+show('Task 7 - Even or Odd', evenOdd);
+
+// Task 8
+let username = 'admin';
+let password = '12345';
+
+let login = (username === 'admin' && password === '12345')
+    ? 'Login Success'
+    : 'Invalid Credentials';
+
+show('Task 8 - Login System', login);
+
+// Task 9
+let age = 22;
+let vote = age >= 18 ? 'Eligible for Vote' : 'Not Eligible';
+
+show('Task 9 - Voting Eligibility', vote);
+
+// Task 10
+let empSalary = 40000;
+let experience = 3;
+
+let emi = (empSalary > 30000 && experience >= 2)
+    ? 'Eligible'
+    : 'Not Eligible';
+
+show('Task 10 - EMI Eligibility', emi);
+
+// Task 11
+let price = 5000;
+let discountAmount = price * 10 / 100;
+let finalPrice = price - discountAmount;
+
+show('Task 11 - Product Discount',
+`Discount Amount : ${discountAmount}
+Final Price : ${finalPrice}`);
+
+// Task 12
+let userName = 'Himavanth';
+let email = 'himavanth@gmail.com';
+let phone = '7569943340';
+let city = 'Guntur';
+
+show('Task 12 - User Registration',
+`----- User Details -----
+Name : ${userName}
+Email : ${email}
+Phone : ${phone}
+City : ${city}`);
+
+// Task 13
+let social = {
+    username: 'himavanth_18',
+    followers: 1200,
+    following: 350,
+    posts: 45,
+    verified: false
+};
+
+show('Task 13 - Social Media Profile',
+`Username : ${social.username}
+Followers : ${social.followers}
+Verified Status : ${social.verified}`);
+
+// Task 14
+let menu = ['Idli','Dosa','Poori','Meals','Parotta'];
+
+show('Task 14 - Restaurant Menu',
+`Second Item : ${menu[1]}
+Fourth Item : ${menu[3]}
+Last Item : ${menu[menu.length-1]}`);
+
+// Task 15
+let accountBalance = 25000;
+let withdraw = 8000;
+let remaining = accountBalance - withdraw;
+
+show('Task 15 - Banking System',
+`Remaining Balance : ${remaining}`);
+
+// Task 16
+let mobilePrice = 25000;
+let exchange = 5000;
+let coupon = 2000;
+let finalMobile = mobilePrice - exchange - coupon;
+
+show('Task 16 - Mobile Store',
+`Final Amount : ${finalMobile}`);
+
+// Task 17
+let exp = 5;
+let performance = true;
+
+let promotion = (exp >= 5 && performance)
+    ? 'Promotion Approved'
+    : 'Promotion Pending';
+
+show('Task 17 - Employee Promotion', promotion);
+
+// Task 18
+let ticketPrice = 180;
+let people = 5;
+let totalTicket = ticketPrice * people;
+
+show('Task 18 - Movie Ticket',
+`Total Amount : ${totalTicket}`);
+
+// Task 19
+let temperature = 38;
+let weather = temperature >= 35 ? 'Hot Day' : 'Normal Weather';
+
+show('Task 19 - Weather App', weather);
+
+// Task 20
+let employee = {
+    empCode: 'EMP1001',
+    name: 'Himavanth',
+    department: 'Frontend',
+    designation: 'Full Stack Developer',
+    salary: 28000,
+    skills: ['HTML','CSS','JavaScript','React'],
+    permanent: true
+};
+
+show('Task 20 - Mini HR Management',
+`Employee Code : ${employee.empCode}
+Employee Name : ${employee.name}
+Department : ${employee.department}
+Salary : ${employee.salary}
+Last Skill : ${employee.skills[employee.skills.length-1]}
+Permanent Status : ${employee.permanent}`);

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 20 Tasks</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            padding:20px;
+        }
+        h1{
+            text-align:center;
+            color:#333;
+        }
+        .task{
+            background:white;
+            padding:15px;
+            margin-bottom:15px;
+            border-radius:10px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        }
+        pre{
+            background:#222;
+            color:#0f0;
+            padding:10px;
+            border-radius:6px;
+            overflow:auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Class Tasks (1-20)</h1>
+
+<div id="output"></div>
+
+<script>
+const output = document.getElementById("output");
+
+function show(taskTitle, content){
+    output.innerHTML += `
+        <div class="task">
+            <h2>${taskTitle}</h2>
+            <pre>${content}</pre>
+        </div>
+    `;
+    console.log(taskTitle + "\\n" + content);
+}
+
+// Task 1 - Employee Profile
+let empName = "Himavanth";
+let employeeId = "EMP1001";
+let department = "Frontend";
+let salary = 35000;
+let isPermanent = true;
+
+show("Task 1 - Employee Profile",
+`Name : ${empName}
+Employee ID : ${employeeId}
+Department : ${department}
+Salary : ${salary}
+Permanent : ${isPermanent}`);
+
+// Task 2 - Student Details
+let student = {
+    name: "Himavanth",
+    age: 22,
+    course: "B.Tech CSE",
+    college: "SRM University",
+    passed: true
+};
+
+show("Task 2 - Student Details",
+`Student Name : ${student.name}
+Course : ${student.course}
+Passed Status : ${student.passed}`);
+
+// Task 3 - Shopping Cart
+let cart = ["Milk","Rice","Oil","Sugar","Soap"];
+
+show("Task 3 - Shopping Cart",
+`First Product : ${cart[0]}
+Third Product : ${cart[2]}
+Last Product : ${cart[cart.length-1]}
+Total Products : ${cart.length}`);
+
+// Task 4 - Company Employee Database
+let employeeDB = {
+    name: "Himavanth",
+    designation: "Frontend Developer",
+    salary: 35000,
+    skills: ["HTML","CSS","JavaScript","React"]
+};
+
+show("Task 4 - Company Employee Database",
+`Employee Name : ${employeeDB.name}
+Designation : ${employeeDB.designation}
+Second Skill : ${employeeDB.skills[1]}`);
+
+// Task 5 - Salary Calculation
+let basicSalary = 25000;
+let bonus = 5000;
+let totalSalary = basicSalary + bonus;
+
+show("Task 5 - Salary Calculation",
+`Total Salary : ${totalSalary}`);
+
+// Task 6 - GST Calculator
+let productPrice = 4500;
+let gstRate = 18;
+let gstAmount = productPrice * gstRate / 100;
+let finalAmountGST = productPrice + gstAmount;
+
+show("Task 6 - GST Calculator",
+`GST Amount : ${gstAmount}
+Final Amount : ${finalAmountGST}`);
+
+// Task 7 - Even or Odd
+let number = 25;
+let evenOdd = number % 2 === 0 ? "Even Number" : "Odd Number";
+
+show("Task 7 - Even or Odd", evenOdd);
+
+// Task 8 - Login System
+let username = "admin";
+let password = "12345";
+
+let loginResult = (username === "admin" && password === "12345") 
+    ? "Login Success" 
+    : "Invalid Credentials";
+
+show("Task 8 - Login System", loginResult);
+
+// Task 9 - Voting Eligibility
+let age = 22;
+let voteResult = age >= 18 ? "Eligible for Vote" : "Not Eligible";
+
+show("Task 9 - Voting Eligibility", voteResult);
+
+// Task 10 - EMI Eligibility
+let empSalary = 40000;
+let experience = 3;
+
+let emiResult = (empSalary > 30000 && experience >= 2)
+    ? "Eligible"
+    : "Not Eligible";
+
+show("Task 10 - EMI Eligibility", emiResult);
+
+// Task 11 - Product Discount
+let price = 5000;
+let discount = 10;
+let discountAmount = price * discount / 100;
+let finalPrice = price - discountAmount;
+
+show("Task 11 - Product Discount",
+`Discount Amount : ${discountAmount}
+Final Price : ${finalPrice}`);
+
+// Task 12 - User Registration
+let userName = "Himavanth";
+let email = "himavanth@gmail.com";
+let phone = "7569943340";
+let city = "Guntur";
+
+show("Task 12 - User Registration",
+`----- User Details -----
+Name : ${userName}
+Email : ${email}
+Phone : ${phone}
+City : ${city}`);
+
+// Task 13 - Social Media Profile
+let socialProfile = {
+    username: "himavanth_18",
+    followers: 1200,
+    following: 350,
+    posts: 45,
+    verified: false
+};
+
+show("Task 13 - Social Media Profile",
+`Username : ${socialProfile.username}
+Followers : ${socialProfile.followers}
+Verified Status : ${socialProfile.verified}`);
+
+// Task 14 - Restaurant Menu
+let menu = ["Idli","Dosa","Poori","Meals","Parotta"];
+
+show("Task 14 - Restaurant Menu",
+`Second Item : ${menu[1]}
+Fourth Item : ${menu[3]}
+Last Item : ${menu[menu.length-1]}`);
+
+// Task 15 - Banking System
+let accountBalance = 25000;
+let withdraw = 8000;
+let remainingBalance = accountBalance - withdraw;
+
+show("Task 15 - Banking System",
+`Remaining Balance : ${remainingBalance}`);
+
+// Task 16 - Mobile Store
+let mobilePrice = 25000;
+let exchange = 5000;
+let coupon = 2000;
+let finalMobileAmount = mobilePrice - exchange - coupon;
+
+show("Task 16 - Mobile Store",
+`Final Amount : ${finalMobileAmount}`);
+
+// Task 17 - Employee Promotion
+let exp = 5;
+let performance = true;
+
+let promotionResult = (exp >= 5 && performance === true)
+    ? "Promotion Approved"
+    : "Promotion Pending";
+
+show("Task 17 - Employee Promotion", promotionResult);
+
+// Task 18 - Movie Ticket
+let ticketPrice = 180;
+let people = 5;
+let totalTicketAmount = ticketPrice * people;
+
+show("Task 18 - Movie Ticket",
+`Total Amount : ${totalTicketAmount}`);
+
+// Task 19 - Weather App
+let temperature = 38;
+let weatherResult = temperature >= 35 ? "Hot Day" : "Normal Weather";
+
+show("Task 19 - Weather App", weatherResult);
+
+// Task 20 - Mini HR Management
+let employee = {
+    empCode: "EMP1001",
+    name: "Himavanth",
+    department: "Frontend",
+    designation: "Full Stack Developer",
+    salary: 35000,
+    skills: ["HTML","CSS","JavaScript","React"],
+    permanent: true
+};
+
+show("Task 20 - Mini HR Management",
+`Employee Code : ${employee.empCode}
+Employee Name : ${employee.name}
+Department : ${employee.department}
+Salary : ${employee.salary}
+Last Skill : ${employee.skills[employee.skills.length-1]}
+Permanent Status : ${employee.permanent}`);
+</script>
+
+</body>
+</html>
